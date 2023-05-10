@@ -12,6 +12,15 @@ public class GameObject {
     private Integer xPosition;
     private Integer xSize;
     private Integer ySize;
+
+    /**
+     * Konstruktor Klasse für die Spielobjekte
+     * @param obj das Spielobjekt als GameLogic Type
+     * @param xPos die x-Position des Spielobjekts als Integer
+     * @param yPos die y-Position des Spielobjekts als Integer
+     * @param xSize die Breite des Spielobjekts als Integer
+     * @param ySize die Höhe des Spielobjekts als Integer
+     */
     public GameObject(GameLogic obj, Integer xPos, Integer yPos, Integer xSize, Integer ySize) {
         this.xPosition = xPos;
         this.yPosition = yPos;
