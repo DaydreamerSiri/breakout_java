@@ -2,6 +2,8 @@ package src;
 
 import src.GameObject;
 
+import java.awt.*;
+
 /**
  * Klasse des Ball Objekts im Breakout Spiel
  * @author Sehri Singh
@@ -19,8 +21,8 @@ public class Ball extends GameObject {
      * @param xSize die Breite des Balls als Integer
      * @param ySize die Höhe des Balls als Integer
      */
-    public Ball(GameLogic obj, Integer xPos, Integer yPos, Integer xSize, Integer ySize) {
-        super(obj, xPos, yPos, xSize, ySize);
+    public Ball(GameLogic obj, Integer xPos, Integer yPos, Integer xSize, Integer ySize, Color color) {
+        super(obj, xPos, yPos, xSize, ySize, color);
     }
 
     /**

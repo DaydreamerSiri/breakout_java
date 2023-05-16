@@ -7,7 +7,7 @@ import java.awt.*;
  * @Author Tjark Jansen
  */
 public class GameObject {
-    private Color farbe;
+    private Color color;
     private Integer yPosition;
     private Integer xPosition;
     private Integer xSize;
@@ -21,11 +21,12 @@ public class GameObject {
      * @param xSize die Breite des Spielobjekts als Integer
      * @param ySize die Höhe des Spielobjekts als Integer
      */
-    public GameObject(GameLogic obj, Integer xPos, Integer yPos, Integer xSize, Integer ySize) {
+    public GameObject(GameLogic obj, Integer xPos, Integer yPos, Integer xSize, Integer ySize, Color color) {
         this.xPosition = xPos;
         this.yPosition = yPos;
         this.xSize = xSize;
         this.ySize = ySize;
+        this.color = color;
     }
 
     /**
