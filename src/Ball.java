@@ -15,7 +15,7 @@ public class Ball extends GameObject {
 
     /**
      * Konstruktor für die Ballklasse
-     * @param obj das Ballobjekt als GameLogic Typ
+     * @param obj das Ballobjekt als src.GameLogic Typ
      * @param xPos die X-Position des Balls als Integer
      * @param yPos die Y-Position des Balls als Integer
      * @param xSize die Breite des Balls als Integer
@@ -26,18 +26,28 @@ public class Ball extends GameObject {
     }
 
     /**
-     * Methode um die B
-     * @param xVelocity
-     * @param yVelocity
+     * Methode um die Beschleunigung des Balls zu setzen
+     * @param xVelocity die X-Beschleunigung des Balls als Integer
+     * @param yVelocity die Y-Beschleunigung des Balls als Integer
      */
     public void setVelocity(Integer xVelocity, Integer yVelocity) {
         this.xVelocity = xVelocity;
         this.yVelocity = yVelocity;
     }
 
+    /**
+     * Getter Methode um die X-Beschleunigung zu bekommen
+     * @return die X-Beschleunigung als Integer
+     */
     public Integer getXVelocity() {
+
         return this.xVelocity;
     }
+
+    /**
+     * Getter Methode um die Y-Beschleunigung zu bekommen
+     * @return die Y-Beschlunigung als Integer
+     */
     public Integer getYVelocity() {
         return this.yVelocity;
     }

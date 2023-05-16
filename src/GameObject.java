@@ -15,7 +15,7 @@ public class GameObject {
 
     /**
      * Konstruktor Klasse für die Spielobjekte
-     * @param obj das Spielobjekt als GameLogic Type
+     * @param obj das Spielobjekt als src.GameLogic Type
      * @param xPos die x-Position des Spielobjekts als Integer
      * @param yPos die y-Position des Spielobjekts als Integer
      * @param xSize die Breite des Spielobjekts als Integer
