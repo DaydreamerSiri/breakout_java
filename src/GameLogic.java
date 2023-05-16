@@ -1,3 +1,5 @@
+package src;
+
 /**
  *Klasse um die Anzahl der Bälle, sowie den Spielscore wiedergibt
  * @Author Tjark Jansen
