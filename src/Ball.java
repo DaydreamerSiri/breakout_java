@@ -1,7 +1,5 @@
 package src;
 
-import src.GameObject;
-
 import java.awt.*;
 
 /**
