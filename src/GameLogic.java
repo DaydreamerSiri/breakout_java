@@ -27,11 +27,11 @@ public class GameLogic extends JPanel {
         setPreferredSize(new Dimension(Configuration.FIELD_Y_SIZE, Configuration.FIELD_X_SIZE));
     }
     private void genField() {
-        this.paddle = new Paddle(this, 10,10,10,10, Color.BLUE);
-        this.ball = new Ball(this, 15, 15, 5,5, Color.BLACK);
+        this.paddle = new Paddle(this, 160,280,75,50, Color.BLUE);
+        this.ball = new Ball(this, 160, this.paddle.yPosition - 60, 50,50, Color.BLACK);
         this.bricks = new HashSet<>();
         for(int i = 0; i < 20; i++) {
-            bricks.add(new Brick(this, 0,0,10,10,Color.red));
+            bricks.add(new Brick(this, ,30 + (i),50,50,Color.red));
         }
     }
     @Override
