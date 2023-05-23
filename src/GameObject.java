@@ -2,15 +2,15 @@ import java.awt.*;
 
 /**
  * Parent-Klasse für die einzelnen Spielobjekte
- * @Author Sehri Singh
- * @Author Tjark Jansen
+ * @author Sehri Singh
+ * @author Tjark Jansen
  */
 public class GameObject {
-    private Color color;
-    private Integer yPosition;
-    private Integer xPosition;
-    private Integer xSize;
-    private Integer ySize;
+    protected Color color;
+    protected Integer yPosition;
+    protected Integer xPosition;
+    protected Integer xSize;
+    protected Integer ySize;
 
     /**
      * Konstruktor Klasse für die Spielobjekte

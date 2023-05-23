@@ -47,4 +47,9 @@ public class Ball extends GameObject {
     public Integer getYVelocity() {
         return this.yVelocity;
     }
+
+    public void render(Graphics graphics) {
+        graphics.setColor(color);
+        graphics.fillOval(xPosition - xSize / 2, yPosition - ySize / 2, xSize, ySize);
+    }
 }

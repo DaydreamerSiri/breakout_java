@@ -33,4 +33,8 @@ public class Paddle extends GameObject {
     public Integer getXVelocityPaddle() {
         return this.xVelocityPaddle;
     }
+    public void render(Graphics graphics) {
+        graphics.setColor(color);
+        graphics.fillRect(xPosition - xSize / 2, yPosition - ySize / 2, xSize, ySize);
+    }
 }

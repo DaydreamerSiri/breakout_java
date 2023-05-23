@@ -40,4 +40,9 @@ public class Brick extends GameObject {
      */
     public void isIntact() {
     }
+    public void render(Graphics graphics) {
+        graphics.setColor(this.color);
+        graphics.fillRect(xPosition - xSize / 2, yPosition - ySize / 2, xSize, ySize);
+    }
+
 }
