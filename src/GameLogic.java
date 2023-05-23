@@ -31,7 +31,7 @@ public class GameLogic extends JPanel {
         this.ball = new Ball(this, 160, this.paddle.yPosition - 60, 50,50, Color.BLACK);
         this.bricks = new HashSet<>();
         for(int i = 0; i < 20; i++) {
-            bricks.add(new Brick(this, ,30 + (i),50,50,Color.red));
+            bricks.add(new Brick(this, 30 + (i*2),30 + (i),50,50,Color.red));
         }
     }
     @Override
