@@ -1,5 +1,3 @@
-package src;
-
 import java.awt.*;
 /**
  * Klasse des Paddle Objekts im Breakout Spiel
@@ -32,7 +30,7 @@ public class Paddle extends GameObject {
     /**
      * Methode gibt Geschwindigkeit des Paddles wieder
      */
-    public Integer getXVelocityPaddle(){
+    public Integer getXVelocityPaddle() {
         return this.xVelocityPaddle;
     }
 }

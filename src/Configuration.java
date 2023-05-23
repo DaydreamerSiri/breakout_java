@@ -1,4 +1,3 @@
-package src;
 
 /**
  * Magic Number Klasse für die Konfiguration des Breakout Spiels

@@ -1,4 +1,3 @@
-package src;
 
 /**
  * Enumerator für den Spielstatus
