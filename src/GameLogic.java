@@ -163,10 +163,10 @@ public class GameLogic extends JPanel {
      * Methode welches beim verlieren eines Balls die Position des Schlägers und Balls zurücksetzt
      */
     private void restartWithNewBall() {
-        this.ball.yPosition = Configuration.PADDLE_Y_POSITION;
-        this.ball.xPosition = restartXPosition;
-        this.paddle.xPosition = restartXPosition;
-        this.paddle.yPosition = Configuration.PADDLE_Y_POSITION;
+        this.ball.yPosition = Configuration.PADDLE_Y_POSITION - 60;
+        this.ball.xPosition = Configuration.FIELD_X_SIZE/2;
+        this.paddle.xPosition = Configuration.FIELD_X_SIZE/2;
+        this.paddle.yPosition = Configuration.FIELD_Y_SIZE*7/8;
     }
 
     /**
