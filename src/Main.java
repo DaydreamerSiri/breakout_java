@@ -20,7 +20,7 @@ public class Main {
         frame.pack();
         // show window
         frame.setVisible(true);
-        gl.setDifficulty(3,3);
+        gl.setDifficulty(2,2);
         gl.start();
     }
 

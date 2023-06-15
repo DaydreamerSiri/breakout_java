@@ -150,10 +150,11 @@ public class GameLogic extends JPanel {
             bricks.remove(hitBrick);
             score += Configuration.BRICK_SCORE;
         } else if (bricks.isEmpty()) {
+            GameState state = GameState.GAME_OVER;
             System.out.println("Game Over");
             System.out.println("Reached Highscore:");
             System.out.println(score);
-            GameState state = GameState.GAME_OVER;
+            System.exit(-1);
         }
 
         repaint();

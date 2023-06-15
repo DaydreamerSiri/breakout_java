@@ -87,7 +87,6 @@ public class Ball extends GameObject {
         hitbox.width = this.getWidth() + (this.getHeight()/4);
         hitbox.y = this.getYPosition();
         hitbox.x = this.getXPosition();
-        System.out.println(hitbox + "Ball");
         return hitbox;
     }
 

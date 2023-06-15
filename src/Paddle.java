@@ -65,7 +65,6 @@ public class Paddle extends GameObject {
         hitbox.width = this.getWidth();
         hitbox.y = this.getYPosition() - (this.getHeight()/2);
         hitbox.x = this.getXPosition() - (this.getWidth()/2);
-        //System.out.println(hitbox + "Paddle");
         return hitbox;
     }
 
