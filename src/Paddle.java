@@ -34,6 +34,9 @@ public class Paddle extends GameObject {
         return this.xVelocity;
     }
 
+    /**
+     * Methode um den Schläger zu bewegen
+     */
     public void move() {
         xPosition += xVelocity;
         int xHalf = xSize / 2;
@@ -44,11 +47,18 @@ public class Paddle extends GameObject {
         }
     }
 
+    /**
+     * Methode um den Schläger rendern zu lassen.
+     */
     public void render(Graphics graphics) {
         graphics.setColor(color);
         graphics.fillRect(xPosition - xSize / 2, yPosition - ySize / 2, xSize, ySize);
     }
 
+    /**
+     * Methode welches die Hitbox vom Objekt als Rectangle Objekt zurückgibt
+     * @return hitbox as Rectangle
+     */
     public Rectangle getHitBox() {
         Rectangle hitbox = new Rectangle();
         hitbox.height = this.getHeight();

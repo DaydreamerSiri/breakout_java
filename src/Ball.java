@@ -50,11 +50,17 @@ public class Ball extends GameObject {
         return this.yVelocity;
     }
 
+    /**
+     * Methode um den Ball rendern zu lassen.
+     */
     public void render(Graphics graphics) {
         graphics.setColor(color);
         graphics.fillOval(xPosition - xSize / 2, yPosition - ySize / 2, xSize, ySize);
     }
 
+    /**
+     * Methode um den Ball zu bewegen
+     */
     public void move() {
         System.out.println(yVelocity);
         xPosition += xVelocity;
@@ -71,6 +77,10 @@ public class Ball extends GameObject {
         }
     }
 
+    /**
+     * Methode welches die Hitbox vom Objekt als Rectangle Objekt zurückgibt
+     * @return hitbox as Rectangle
+     */
     public Rectangle getHitBox() {
         Rectangle hitbox = new Rectangle();
         hitbox.height = this.getHeight() + (this.getHeight()/4);
