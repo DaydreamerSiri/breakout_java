@@ -50,7 +50,7 @@ public class GameObject {
      * Gibt die Höhe des Spielobjekts zurück
      * @return Die Höhe als Integer
      */
-    public Integer getHeigth() {
+    public Integer getHeight() {
         return this.ySize;
     }
 

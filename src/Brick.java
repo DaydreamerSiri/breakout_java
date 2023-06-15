@@ -45,4 +45,14 @@ public class Brick extends GameObject {
         graphics.fillRect(xPosition - xSize / 2, yPosition - ySize / 2, xSize, ySize);
     }
 
+    public Rectangle getHitBox() {
+        Rectangle hitbox = new Rectangle();
+        hitbox.height = this.getHeight();
+        hitbox.width = this.getWidth();
+        hitbox.y = this.getYPosition();
+        hitbox.x = this.getXPosition();
+        System.out.println(hitbox + "Brick");
+        return hitbox;
+    }
+
 }

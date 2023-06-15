@@ -13,7 +13,7 @@ public class Configuration {
     public static final int PADDLE_VELOCITY = 2;
     public static final int BALL_X_SIZE = 5;
     public static final int BALL_Y_SIZE = 5;
-    public static final int BALL_VELOCITY_MAX = 1;
+    public static final int BALL_VELOCITY_MAX = 5;
     public static final int BRICK_X_SIZE = 59;
     public static final int BRICK_Y_SIZE = 25;
     public static final int BRICK_SCORE = 100;
