@@ -83,7 +83,6 @@ public class GameLogic extends JPanel {
         nextX.setLocation(nextX.x + ball.getXVelocity(), nextX.y);
         Rectangle nextY = new Rectangle(ballHitBox);
         nextY.setLocation(nextY.x, nextY.y + ball.getYVelocity());
-
         this.ball.move();
         paddle.move();
 
@@ -137,8 +136,8 @@ public class GameLogic extends JPanel {
         this.paddle = new Paddle(this, 160,280,Configuration.PADDLE_X_SIZE,Configuration.PADDLE_Y_SIZE, Color.BLUE);
         this.ball = new Ball(this, 160, this.paddle.yPosition - 60, Configuration.BALL_Y_SIZE, Configuration.BALL_X_SIZE, Color.BLACK);
         this.bricks = new HashSet<>();
-        for(int row = 0; row < 3; row++){
-            for(int i = 0; i < 4; i++) {
+        for(int row = 0; row <= 3; row++){
+            for(int i = 0; i <= 3; i++) {
                 bricks.add(new Brick(this, 70 + (i*60),30 + (row * 55),Configuration.BRICK_X_SIZE,Configuration.BRICK_Y_SIZE,Color.red));
             }
         }

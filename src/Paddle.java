@@ -53,9 +53,9 @@ public class Paddle extends GameObject {
         Rectangle hitbox = new Rectangle();
         hitbox.height = this.getHeight();
         hitbox.width = this.getWidth();
-        hitbox.y = this.getYPosition();
-        hitbox.x = this.getXPosition();
-        System.out.println(hitbox + "Paddle");
+        hitbox.y = this.getYPosition() - (this.getHeight()/2);
+        hitbox.x = this.getXPosition() - (this.getWidth()/2);
+        //System.out.println(hitbox + "Paddle");
         return hitbox;
     }
 
