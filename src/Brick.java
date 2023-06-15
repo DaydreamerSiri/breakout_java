@@ -40,4 +40,25 @@ public class Brick extends GameObject {
      */
     public void isIntact() {
     }
+    /**
+     * Methode um die Steine rendern zu lassen.
+     */
+    public void render(Graphics graphics) {
+        graphics.setColor(this.color);
+        graphics.fillRect(xPosition - xSize / 2, yPosition - ySize / 2, xSize, ySize);
+    }
+
+    /**
+     * Methode welches die Hitbox vom Objekt als Rectangle Objekt zurückgibt
+     * @return hitbox as Rectangle
+     */
+    public Rectangle getHitBox() {
+        Rectangle hitbox = new Rectangle();
+        hitbox.height = this.getHeight();
+        hitbox.width = this.getWidth();
+        hitbox.y = this.getYPosition() - (this.getHeight()/3);
+        hitbox.x = this.getXPosition() - (this.getWidth()/2);
+        return hitbox;
+    }
+
 }

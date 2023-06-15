@@ -6,7 +6,7 @@ import java.awt.*;
  */
 
 public class Paddle extends GameObject {
-    private Integer xVelocityPaddle;
+    private Integer xVelocity = 0;
     /**
     Konstruktor für die Paddle Klasse
      @param obj das Paddleobjekt als src.Ball.GameLogic Typ
@@ -23,14 +23,49 @@ public class Paddle extends GameObject {
     /**
      * Methode setzt Geschwindigkeit des Paddles fest
      */
-    public void setxVelocityPaddle(int xVelocityPaddle) {
-        this.xVelocityPaddle = xVelocityPaddle;
+    public void setVelocity(int xVelocity) {
+        this.xVelocity = xVelocity;
     }
 
     /**
      * Methode gibt Geschwindigkeit des Paddles wieder
      */
-    public Integer getXVelocityPaddle() {
-        return this.xVelocityPaddle;
+    public Integer getVelocity() {
+        return this.xVelocity;
     }
+
+    /**
+     * Methode um den Schläger zu bewegen
+     */
+    public void move() {
+        xPosition += xVelocity;
+        int xHalf = xSize / 2;
+        if (xPosition < xHalf) {
+            xPosition = xHalf;
+        } else if (xPosition >= Configuration.FIELD_X_SIZE - xHalf) {
+            xPosition = Configuration.FIELD_X_SIZE - xHalf;
+        }
+    }
+
+    /**
+     * Methode um den Schläger rendern zu lassen.
+     */
+    public void render(Graphics graphics) {
+        graphics.setColor(color);
+        graphics.fillRect(xPosition - xSize / 2, yPosition - ySize / 2, xSize, ySize);
+    }
+
+    /**
+     * Methode welches die Hitbox vom Objekt als Rectangle Objekt zurückgibt
+     * @return hitbox as Rectangle
+     */
+    public Rectangle getHitBox() {
+        Rectangle hitbox = new Rectangle();
+        hitbox.height = this.getHeight();
+        hitbox.width = this.getWidth();
+        hitbox.y = this.getYPosition() - (this.getHeight()/2);
+        hitbox.x = this.getXPosition() - (this.getWidth()/2);
+        return hitbox;
+    }
+
 }

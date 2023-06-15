@@ -1,3 +1,5 @@
+import org.w3c.dom.css.Rect;
+
 import java.awt.*;
 
 /**
@@ -6,8 +8,8 @@ import java.awt.*;
  * @author Tjark Jansen
  */
 public class Ball extends GameObject {
-    private Integer xVelocity;
-    private Integer yVelocity;
+    private Integer xVelocity = 0;
+    private Integer yVelocity = 0;
 
     /**
      * Konstruktor für die Ballklasse
@@ -47,4 +49,45 @@ public class Ball extends GameObject {
     public Integer getYVelocity() {
         return this.yVelocity;
     }
+
+    /**
+     * Methode um den Ball rendern zu lassen.
+     */
+    public void render(Graphics graphics) {
+        graphics.setColor(color);
+        graphics.fillOval(xPosition - xSize / 2, yPosition - ySize / 2, xSize, ySize);
+    }
+
+    /**
+     * Methode um den Ball zu bewegen
+     */
+    public void move() {
+        System.out.println(yVelocity);
+        xPosition += xVelocity;
+        if (xPosition < 0) {
+            xVelocity = -xVelocity;
+        } else if (xPosition >= Configuration.FIELD_X_SIZE) {
+            xVelocity = -xVelocity;
+        }
+        yPosition += yVelocity;
+        if (yPosition < 0) {
+            yVelocity = -yVelocity;
+        } else if (yPosition >= Configuration.FIELD_Y_SIZE) {
+            yVelocity = -yVelocity;
+        }
+    }
+
+    /**
+     * Methode welches die Hitbox vom Objekt als Rectangle Objekt zurückgibt
+     * @return hitbox as Rectangle
+     */
+    public Rectangle getHitBox() {
+        Rectangle hitbox = new Rectangle();
+        hitbox.height = this.getHeight() + (this.getHeight()/4);
+        hitbox.width = this.getWidth() + (this.getHeight()/4);
+        hitbox.y = this.getYPosition();
+        hitbox.x = this.getXPosition();
+        return hitbox;
+    }
+
 }
